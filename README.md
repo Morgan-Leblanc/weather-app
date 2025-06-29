@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# Marine Weather Intelligence
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A real-time weather monitoring application for Mediterranean ports. Get live weather data including temperature, wind, pressure, humidity, and visibility for major ports across the Mediterranean Sea.
+
+## Features
+
+- **Interactive Map**: Explore Mediterranean ports with custom marine-themed markers
+- **Real-time Weather**: Live weather data from OpenWeatherMap API
+- **Detailed Information**: Temperature, wind speed/direction, pressure, humidity, visibility
+- **Responsive Design**: Works on desktop and mobile devices
+- **Clean Interface**: Modern marine-inspired design with smooth animations
+
+## Tech Stack
+
+- **React 18** with TypeScript
+- **Leaflet** for interactive maps
+- **OpenWeatherMap API** for weather data
+- **CSS3** with custom marine theme
+- **Create React App** for development and building
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone <repository-url>
+cd weather-mwi
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Set up environment variables
+Create a `.env` file in the root directory:
+```env
+REACT_APP_OPENWEATHER_API_KEY=your_api_key_here
+```
+
+Get your free API key from [OpenWeatherMap](https://openweathermap.org/api)
+
+4. Start the development server
+```bash
+npm start
+```
+
+The app will open at `http://localhost:3000`
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+## Usage
+
+1. **View the Map**: The application loads with a map centered on the Mediterranean Sea
+2. **Select a Port**: Click on any port marker to view detailed weather information
+3. **View Weather Data**: A sidebar will open showing current weather conditions
+4. **Close Sidebar**: Click outside the sidebar to close it
+
+## Project Structure
+
+```
+src/
+├── components/          # React components
+│   ├── Map.tsx         # Interactive map component
+│   └── Sidebar.tsx     # Weather information panel
+├── services/           # API services
+│   └── weatherAPI.ts   # OpenWeatherMap API integration
+├── App.tsx             # Main application component
+├── index.tsx           # Application entry point
+└── index.css           # Global styles
+```
+
+## API Configuration
+
+The application uses the OpenWeatherMap API to fetch weather data. Make sure to:
+
+1. Sign up for a free API key at [OpenWeatherMap](https://openweathermap.org/api)
+2. Add your API key to the `.env` file
+3. The API provides data for temperature, wind, pressure, humidity, and visibility
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm start` - Start development server
+- `npm run build` - Build for production
+- `npm test` - Run tests
+- `npm run eject` - Eject from Create React App (not recommended)
 
-### `npm start`
+## Contributing
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## License
 
-### `npm test`
+This project is open source and available under the [MIT License](LICENSE).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Support
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you encounter any issues or have questions, please open an issue on GitHub.
